@@ -1,0 +1,25 @@
+name: packer
+on: [push]
+jobs:
+  inspect:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: info
+      run: |
+          uname -r
+          lscpu
+          cat /etc/issue
+
+  packer:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: validate
+      run: |
+          curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+          sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+          sudo apt-get update && sudo apt-get install packer
+          sudo packer version
+          sudo packer validate -syntax-only ubuntu-18.04-amd64.json
+          sudo packer validate -syntax-only ubuntu-20.04-amd64.json
