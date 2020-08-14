@@ -15,5 +15,5 @@
 ![kibana7](https://github.com/jianshengqi/virtualization/workflows/kibana7/badge.svg)
 
 ## 5、ubuntu
-![ubuntu18_04](https://github.com/jianshengqi/virtualization/workflows/ubuntu18_04/badge.svg)
-![ubuntu20_04](https://github.com/jianshengqi/virtualization/workflows/ubuntu20_04/badge.svg)
+![ubuntu-18.04](https://github.com/jianshengqi/virtualization/workflows/ubuntu-18.04/badge.svg)
+![ubuntu-20.04](https://github.com/jianshengqi/virtualization/workflows/ubuntu-20.04/badge.svg)
