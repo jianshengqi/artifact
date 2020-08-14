@@ -23,7 +23,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/virtualization
         tags: "lab"
-        dockerfile: docker/docker/lab/lab.dockerfile
+        dockerfile: docker/lab/lab.dockerfile
 
   aliyun_hub:
     runs-on: ubuntu-20.04
@@ -39,4 +39,4 @@ jobs:
         registry: registry.cn-hongkong.aliyuncs.com
         repository: jsq/virtualization
         tags: "lab"
-        dockerfile: docker/docker/lab/lab.dockerfile
+        dockerfile: docker/lab/lab.dockerfile
