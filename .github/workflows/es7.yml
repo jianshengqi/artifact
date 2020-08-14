@@ -14,7 +14,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/dev
         tags: "es7"
-        dockerfile: es7.dockerfile
+        dockerfile: docker/tools/es7.dockerfile
 
   aliyun_hub:
     runs-on: ubuntu-20.04
@@ -30,4 +30,4 @@ jobs:
         registry: registry.cn-hongkong.aliyuncs.com
         repository: jsq/dev
         tags: "es7"
-        dockerfile: tools/es7.dockerfile
+        dockerfile: docker/tools/es7.dockerfile

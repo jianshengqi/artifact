@@ -14,7 +14,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/dev
         tags: "gobpf"
-        dockerfile: gobpf.dockerfile
+        dockerfile: docker/ebpf/gobpf.dockerfile
 
   aliyun_hub:
     runs-on: ubuntu-20.04
@@ -30,4 +30,4 @@ jobs:
         registry: registry.cn-hongkong.aliyuncs.com
         repository: jsq/dev
         tags: "gobpf"
-        dockerfile: ebpf/gobpf.dockerfile
+        dockerfile: docker/ebpf/gobpf.dockerfile
