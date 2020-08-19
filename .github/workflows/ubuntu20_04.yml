@@ -27,7 +27,7 @@ jobs:
       with:
         username: ${{ secrets.ALY_DOCKER_USERNAME }}
         password: ${{ secrets.ALY_DOCKER_PASSWORD }}
-        registry: registry.cn-hongkong.aliyuncs.com
+        registry: registry.cn-hangzhou.aliyuncs.com
         repository: jsq/virtualization
         tags: "ubuntu20_04"
         dockerfile: docker/ubuntu/ubuntu20_04.dockerfile
