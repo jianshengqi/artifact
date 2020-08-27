@@ -24,7 +24,6 @@
 ### ※ custom
 ![gcs](https://github.com/jianshengqi/virtualization/workflows/gcs/badge.svg)
 
-
 ## Ⅱ、vagrant
 
 ### ※ ubuntu
