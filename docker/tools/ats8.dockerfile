@@ -47,7 +47,5 @@ RUN set -x \
  && apt-get clean \
  && rm -rf /tmp/* /var/lib/apt/lists/*
 
-EXPOSE 8080
-
 ENTRYPOINT ["dumb-init"]
 CMD ["traffic_manager", "--stdout"]
