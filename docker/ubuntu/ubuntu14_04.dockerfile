@@ -47,6 +47,8 @@ RUN set -ex \
         locales \
         gnupg2 \
         dos2unix \
+        llvm \
+        clang \
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
     && rm -rf \

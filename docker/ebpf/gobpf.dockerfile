@@ -49,6 +49,8 @@ RUN set -ex \
         netcat \
         locales \
         gnupg2 \
+        llvm \
+        clang \
     && apt-get autoremove -y --purge \
     && apt-get clean \
     && rm -rf \
