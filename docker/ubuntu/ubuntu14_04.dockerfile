@@ -49,6 +49,7 @@ RUN set -ex \
         dos2unix \
         llvm \
         clang \
+        silversearcher-ag \
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
     && rm -rf \

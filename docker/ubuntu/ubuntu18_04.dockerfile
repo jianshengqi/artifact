@@ -13,6 +13,7 @@ RUN set -ex \
         tmux \
         git \
         dumb-init \
+        silversearcher-ag \
     && apt-get autoremove -y --purge \
     && apt-get clean \
     && rm -rf \

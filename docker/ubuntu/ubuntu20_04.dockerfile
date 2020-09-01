@@ -50,6 +50,7 @@ RUN set -ex \
         netcat \
         locales \
         gnupg2 \
+        silversearcher-ag \
     && apt-get autoremove -y --purge \
     && apt-get clean \
     && rm -rf \
