@@ -71,21 +71,21 @@
         "{{template_dir}}/scripts/docker.sh",
         "{{template_dir}}/scripts/go.sh",
         "{{template_dir}}/scripts/cpp.sh",
-        "{{template_dir}}/scripts/motd.sh",
-        "{{template_dir}}/scripts/sshd.sh",
+        "{{template_dir}}/../common/motd.sh",
+        "{{template_dir}}/../common/sshd.sh",
         "{{template_dir}}/scripts/networking.sh",
         "{{template_dir}}/scripts/sudoers.sh",
-        "{{template_dir}}/scripts/vagrant.sh",
-        "{{template_dir}}/scripts/virtualbox.sh",
+        "{{template_dir}}/../common/vagrant.sh",
+        "{{template_dir}}/../common/virtualbox.sh",
         "{{template_dir}}/scripts/cleanup.sh",
-        "{{template_dir}}/scripts/minimize.sh"
+        "{{template_dir}}/../common/minimize.sh"
       ],
       "type": "shell"
     }
   ],
   "variables": {
-    "box_basename": "ubuntu-20.04",
-    "build_directory": "./builds",
+    "box_basename": "ubuntu-18.04",
+    "build_directory": "./../../builds",
     "http_directory": "{{template_dir}}/http",
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "cpus": "1",
@@ -97,14 +97,14 @@
     "hyperv_generation": "2",
     "hyperv_switch": "{{env `hyperv_switch`}}",
     "guest_additions_url": "",
-    "iso_checksum": "36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
+    "iso_checksum": "8c5fc24894394035402f66f3824beb7234b757dd2b5531379cb310cedfdf0996",
     "iso_checksum_type": "sha256",
-    "iso_name": "ubuntu-20.04-legacy-server-amd64.iso",
+    "iso_name": "ubuntu-18.04.5-server-amd64.iso",
     "memory": "1024",
-    "name": "ubuntu-20.04",
+    "name": "ubuntu-18.04",
     "no_proxy": "{{env `no_proxy`}}",
     "preseed_path": "preseed.cfg",
-    "template": "ubuntu-20.04-amd64",
+    "template": "ubuntu-18.04-amd64",
     "version": "TIMESTAMP"
   }
 }
