@@ -21,7 +21,7 @@
 ![ubuntu-18.04](https://github.com/jianshengqi/virtualization/workflows/ubuntu-18.04/badge.svg)
 ![ubuntu-20.04](https://github.com/jianshengqi/virtualization/workflows/ubuntu-20.04/badge.svg)
 
-## Ⅱ、vagrant
+## Ⅱ、packer
 
-### ※ ubuntu
+### ※ ubuntu && centos
 ![validate](https://github.com/jianshengqi/virtualization/workflows/packer/badge.svg)
