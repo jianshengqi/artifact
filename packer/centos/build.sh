@@ -1,1 +1,0 @@
-packer build -only=virtualbox-iso centos-8.2-x86_64.json
