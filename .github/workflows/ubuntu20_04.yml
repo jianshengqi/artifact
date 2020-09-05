@@ -8,6 +8,7 @@ jobs:
       uses: actions/checkout@v2
     - name: dos2unix
       run: |
+          apt-get install -y dos2unix
           find . -type f | xargs dos2unix
     - name: Build and push Docker images to official hub
       uses: docker/build-push-action@v1
