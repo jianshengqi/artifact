@@ -10,8 +10,8 @@ $ packer build -only=virtualbox-iso centos-7.8-x86_64.json
 ```
 
 ```
-$ ubuntu/focal:ubuntu-20.04-legacy-server-amd64.iso
-# https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso
+$ ubuntu/focal:ubuntu-20.04.1-legacy-server-amd64.iso
+# https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso
 
 $ ubuntu/bionic:ubuntu-18.04.4-server-amd64.iso
 # https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/18.04.4/release/ubuntu-18.04.5-server-amd64.iso

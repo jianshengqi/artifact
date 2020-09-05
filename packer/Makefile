@@ -4,7 +4,7 @@ all: ubuntu centos
 ubuntu: ubuntu-iso ubuntu-build
 centos: centos-ios centos-build
 ubuntu-iso:
-	cd ubuntu && aria2c 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso'
+	cd ubuntu && aria2c 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso'
 	cd ubuntu && aria2c 'https://mirrors.tuna.tsinghua.edu.cn/ubuntu-cdimage/releases/18.04.4/release/ubuntu-18.04.5-server-amd64.iso'
 ubuntu-build:
 	cd ubuntu && packer build -only=virtualbox-iso ubuntu-20.04-amd64.json
