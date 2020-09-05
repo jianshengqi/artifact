@@ -51,14 +51,3 @@ apt-get install -y \
             clang \
             silversearcher-ag \
             dumb-init
-
-apt-get autoremove -yqq --purge
-apt-get clean
-
-rm -rf \
- /var/lib/apt/lists/* \
- /tmp/* \
- /var/tmp/* \
- /usr/share/man \
- /usr/share/doc \
- /usr/share/doc-base

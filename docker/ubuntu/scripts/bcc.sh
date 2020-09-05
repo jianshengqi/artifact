@@ -16,16 +16,6 @@ apt-get install -y \
             libbcc-examples \
             linux-headers-$(uname -r)
 
-apt-get autoremove -y --purge
-apt-get clean
-rm -rf \
- /var/lib/apt/lists/* \
- /tmp/* \
- /var/tmp/* \
- /usr/share/man \
- /usr/share/doc \
- /usr/share/doc-base
-
 bcc=https://codeload.github.com/iovisor/bcc/tar.gz/v0.11.0
 curl -L -o bcc.tgz ${bcc}
 mkdir -p /iovisior/bcc && tar -xz -C /iovisior/bcc -f bcc.tgz --strip-components 1 && rm -f bcc.tgz
