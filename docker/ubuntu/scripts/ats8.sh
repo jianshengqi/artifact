@@ -43,6 +43,6 @@ apt-get purge --auto-remove -y \
     libxml2-dev \
     libpcre3-dev \
     tcl-dev \
-    libboost-dev \
+    libboost-dev
 apt-get clean
 rm -rf /tmp/* /var/lib/apt/lists/*
