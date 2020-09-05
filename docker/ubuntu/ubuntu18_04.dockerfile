@@ -8,6 +8,11 @@ COPY scripts .
 
 RUN set -ex \
         && chmod +x *.sh \
-        && ./all.sh
+        && ./common.sh \
+        && ./bcc.sh \
+        && ./ats8.sh \
+        && ./gitbook3.sh \
+        && ./go.sh
+        && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
