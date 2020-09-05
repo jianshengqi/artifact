@@ -13,6 +13,7 @@ RUN set -ex \
         && ./ats8.sh \
         && ./gitbook3.sh \
         && ./go.sh \
+        && ./bionic.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]

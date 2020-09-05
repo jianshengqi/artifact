@@ -10,4 +10,4 @@ RUN set -ex \
         && ./cpp.sh \
         && ./go.sh \
         && ./bcc.sh \
-        && ./gitbook.sh
+        && ./gitbook3.sh

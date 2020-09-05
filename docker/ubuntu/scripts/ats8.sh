@@ -44,5 +44,5 @@ apt-get purge --auto-remove -y \
     libpcre3-dev \
     tcl-dev \
     libboost-dev \
-apt-get clean \
+apt-get clean
 rm -rf /tmp/* /var/lib/apt/lists/*

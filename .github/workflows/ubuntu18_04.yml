@@ -2,7 +2,7 @@ name: ubuntu_18.04
 on: [push]
 jobs:
   docker_hub:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
         dockerfile: docker/ubuntu/ubuntu18_04.dockerfile
 
   aliyun_hub:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
