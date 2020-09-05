@@ -2,8 +2,6 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-bcc=https://codeload.github.com/iovisor/bcc/tar.gz/v0.11.0
-
 apt-get update -y
 apt-get upgrade -y
 apt-get install -y gnupg gnupg1 gnupg2 lsb-core
@@ -28,5 +26,6 @@ rm -rf \
  /usr/share/doc \
  /usr/share/doc-base
 
+bcc=https://codeload.github.com/iovisor/bcc/tar.gz/v0.11.0
 curl -L -o bcc.tgz ${bcc}
 mkdir -p /iovisior/bcc && tar -xz -C /iovisior/bcc -f bcc.tgz --strip-components 1 && rm -f bcc.tgz

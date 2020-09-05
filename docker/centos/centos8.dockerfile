@@ -8,4 +8,6 @@ RUN set -ex \
         && chmod +x *.sh \
         && ./common.sh \
         && ./cpp.sh \
-        && ./go.sh
+        && ./go.sh \
+        && ./bcc.sh \
+        && ./gitbook.sh
