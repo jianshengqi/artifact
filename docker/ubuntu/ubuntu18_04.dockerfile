@@ -12,7 +12,7 @@ RUN set -ex \
         && ./bcc.sh \
         && ./ats8.sh \
         && ./gitbook3.sh \
-        && ./go.sh
+        && ./go.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
