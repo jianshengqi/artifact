@@ -11,7 +11,6 @@ RUN set -ex \
         && ./common.sh \
         && ./bcc.sh \
         && ./ats8.sh \
-        && ./gitbook3.sh \
         && ./go.sh \
         && ./bionic.sh \
         && rm -rf *.sh
