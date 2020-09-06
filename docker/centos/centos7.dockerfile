@@ -8,4 +8,5 @@ RUN set -ex \
         && chmod +x *.sh \
         && ./common.sh \
         && ./cpp.sh \
-        && ./go.sh
+        && ./go.sh \
+        && rm -rf *.sh
