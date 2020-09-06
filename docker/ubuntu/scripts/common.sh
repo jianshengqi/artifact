@@ -50,4 +50,5 @@ apt-get install -y \
             llvm \
             clang \
             silversearcher-ag \
-            dumb-init
+            dumb-init \
+            nmap
