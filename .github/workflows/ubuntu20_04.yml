@@ -1,7 +1,7 @@
 name: ubuntu_20.04
 on: [push]
 jobs:
-  docker_hub:
+  hub:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
@@ -19,16 +19,6 @@ jobs:
         tags: "ubuntu20_04"
         path: docker/ubuntu
         dockerfile: docker/ubuntu/ubuntu20_04.dockerfile
-
-  aliyun_hub:
-    runs-on: ubuntu-20.04
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: dos2unix
-      run: |
-          sudo apt-get install -y dos2unix
-          find docker -type f | xargs dos2unix
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
       with:
