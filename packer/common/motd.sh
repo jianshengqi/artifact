@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-sqjian='This system is built by the sqjian\n'
+sqjian='This system is built by the sqjian'
 
 if [ -d /etc/update-motd.d ]; then
     MOTD_CONFIG='/etc/update-motd.d/99-sqjian'
