@@ -17,12 +17,6 @@ if [ -n "\${PATH##*\${go_bin_path}}" -a -n "\${PATH##*\${go_bin_path}:*}" ]; the
 fi
 EOF
 
-. /etc/profile
-
-# go-bindata
-go get -u github.com/jteeuwen/go-bindata/...
-mv $GOPATH/bin/go-bindata /usr/local/bin
-
 cat >> /root/.bashrc <<EOF
 . /etc/profile
 EOF
