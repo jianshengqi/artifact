@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
-export DEBIAN_FRONTEND=noninteractive
-
 GO="https://dl.google.com/go/go1.14.4.linux-amd64.tar.gz"
 curl -o go.tgz $GO && tar xzf go.tgz -C /usr/local && rm -f go.tgz
 
