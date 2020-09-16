@@ -11,6 +11,7 @@ RUN set -ex \
         && ./common.sh \
         && ./ats8.sh \
         && ./go.sh \
+        && ./clean.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
