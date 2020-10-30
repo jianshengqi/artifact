@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-GO="https://dl.google.com/go/go1.15.1.linux-amd64.tar.gz"
+GO="https://dl.google.com/go/go1.15.3.linux-amd64.tar.gz"
 curl -o go.tgz $GO && tar xzf go.tgz -C /usr/local && rm -f go.tgz
 
 cat >> /etc/profile.d/go.sh <<EOF
