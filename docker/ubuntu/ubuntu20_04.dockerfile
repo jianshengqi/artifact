@@ -9,7 +9,6 @@ COPY scripts .
 RUN set -ex \
         && chmod +x *.sh \
         && ./common.sh \
-        && ./ats8.sh \
         && ./go.sh \
         && ./clean.sh \
         && rm -rf *.sh

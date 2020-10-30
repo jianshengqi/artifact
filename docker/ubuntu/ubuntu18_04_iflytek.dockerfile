@@ -10,6 +10,7 @@ RUN set -ex \
         && chmod +x *.sh \
         && ./common.sh \
         && ./bcc.sh \
+        && ./ats8.sh \
         && ./go.sh \
         && ./bionic.sh \
         && ./clean.sh \
