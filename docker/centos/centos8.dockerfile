@@ -10,4 +10,6 @@ RUN set -ex \
         && ./cpp.sh \
         && ./go.sh \
         && ./bcc.sh \
+        && ./protoc.sh \
+        && ./bashrc.sh \
         && rm -rf *.sh

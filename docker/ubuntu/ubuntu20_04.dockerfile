@@ -10,6 +10,8 @@ RUN set -ex \
         && chmod +x *.sh \
         && ./common.sh \
         && ./go.sh \
+        && ./protoc.sh \
+        && ./bashrc.sh \
         && ./clean.sh \
         && rm -rf *.sh
 

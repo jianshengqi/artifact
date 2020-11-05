@@ -13,6 +13,8 @@ RUN set -ex \
         && ./ats8.sh \
         && ./go.sh \
         && ./bionic.sh \
+        && ./protoc.sh \
+        && ./bashrc.sh \
         && ./clean.sh \
         && rm -rf *.sh
 

@@ -15,7 +15,7 @@ export GO111MODULE=off
 
 go_bin_path=\${GOPATH}/bin:\${GOROOT}/bin
 if [ -n "\${PATH##*\${go_bin_path}}" -a -n "\${PATH##*\${go_bin_path}:*}" ]; then
-    export PATH=\${PATH}:\${GOPATH}/bin:\${GOROOT}/bin
+    export PATH=\${PATH}:\${go_bin_path}
 fi
 EOF
 
@@ -24,7 +24,3 @@ EOF
 # go-bindata
 go get -u github.com/jteeuwen/go-bindata/...
 mv $GOPATH/bin/go-bindata /usr/local/bin
-
-cat >> /root/.bashrc <<EOF
-. /etc/profile
-EOF

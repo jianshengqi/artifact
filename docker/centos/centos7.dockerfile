@@ -9,4 +9,6 @@ RUN set -ex \
         && ./common.sh \
         && ./cpp.sh \
         && ./go.sh \
+        && ./protoc.sh \
+        && ./bashrc.sh \
         && rm -rf *.sh

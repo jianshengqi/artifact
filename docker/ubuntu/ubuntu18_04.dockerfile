@@ -12,6 +12,8 @@ RUN set -ex \
         && ./bcc.sh \
         && ./go.sh \
         && ./bionic.sh \
+        && ./protoc.sh \
+        && ./bashrc.sh \
         && ./clean.sh \
         && rm -rf *.sh
 
