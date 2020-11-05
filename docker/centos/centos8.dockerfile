@@ -11,5 +11,5 @@ RUN set -ex \
         && ./go.sh \
         && ./bcc.sh \
         && ./protoc.sh \
-        && ./bashrc.sh \
+        && ./final.sh \
         && rm -rf *.sh

@@ -13,8 +13,7 @@ RUN set -ex \
         && ./go.sh \
         && ./bionic.sh \
         && ./protoc.sh \
-        && ./bashrc.sh \
-        && ./clean.sh \
+        && ./final.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]

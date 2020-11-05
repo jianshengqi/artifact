@@ -10,5 +10,5 @@ RUN set -ex \
         && ./cpp.sh \
         && ./go.sh \
         && ./protoc.sh \
-        && ./bashrc.sh \
+        && ./final.sh \
         && rm -rf *.sh
