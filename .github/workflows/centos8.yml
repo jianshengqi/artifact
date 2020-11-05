@@ -19,13 +19,13 @@ jobs:
         tags: "centos8"
         path: docker/centos
         dockerfile: docker/centos/centos8.dockerfile
-    # - name: Build and push Docker images to aliyun hub
-    #   uses: docker/build-push-action@v1
-    #   with:
-    #     username: ${{ secrets.ALY_DOCKER_USERNAME }}
-    #     password: ${{ secrets.ALY_DOCKER_PASSWORD }}
-    #     registry: registry.cn-hangzhou.aliyuncs.com
-    #     repository: sqjian/virtualization
-    #     tags: "centos8"
-    #     path: docker/centos
-    #     dockerfile: docker/centos/centos8.dockerfile
+    - name: Build and push Docker images to aliyun hub
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.ALY_DOCKER_USERNAME }}
+        password: ${{ secrets.ALY_DOCKER_PASSWORD }}
+        registry: registry.cn-hangzhou.aliyuncs.com
+        repository: sqjian/virtualization
+        tags: "centos8"
+        path: docker/centos
+        dockerfile: docker/centos/centos8.dockerfile
