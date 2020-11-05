@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.ALY_DOCKER_USERNAME }}
         password: ${{ secrets.ALY_DOCKER_PASSWORD }}
         registry: registry.cn-hangzhou.aliyuncs.com
-        repository: jsq/virtualization
+        repository: sqjian/virtualization
         tags: "ubuntu18_04_iflytek"
         path: docker/ubuntu
         dockerfile: docker/ubuntu/ubuntu18_04_iflytek.dockerfile
