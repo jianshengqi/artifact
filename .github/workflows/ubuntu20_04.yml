@@ -1,5 +1,5 @@
 name: ubuntu_20.04
-on: [push]
+on: [release]
 jobs:
   hub:
     runs-on: ubuntu-20.04

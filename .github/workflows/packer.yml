@@ -1,5 +1,5 @@
 name: packer
-on: [push]
+on: [release]
 jobs:
   inspect:
     runs-on: ubuntu-20.04
