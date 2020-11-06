@@ -4,7 +4,7 @@ WORKDIR /lab
 
 COPY scripts .
 
-RUN set -ex \
+RUN set -eux \
         && chmod +x *.sh \
         && ./common.sh \
         && ./cpp.sh \

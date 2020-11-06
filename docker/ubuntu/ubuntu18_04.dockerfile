@@ -6,7 +6,7 @@ WORKDIR /lab
 
 COPY scripts .
 
-RUN set -ex \
+RUN set -eux \
         && chmod +x *.sh \
         && ./common.sh \
         && ./bcc.sh \
