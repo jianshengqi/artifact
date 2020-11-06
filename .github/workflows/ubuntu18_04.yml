@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/virtualization
         tags: "ubuntu18_04"
-        path: docker/ubuntu
+        path: virtualization/docker/ubuntu
         dockerfile: virtualization/docker/ubuntu/ubuntu18_04.dockerfile
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
@@ -27,5 +27,5 @@ jobs:
         registry: registry.cn-hangzhou.aliyuncs.com
         repository: sqjian/virtualization
         tags: "ubuntu18_04"
-        path: docker/ubuntu
+        path: virtualization/docker/ubuntu
         dockerfile: virtualization/docker/ubuntu/ubuntu18_04.dockerfile
