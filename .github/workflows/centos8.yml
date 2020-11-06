@@ -15,7 +15,7 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: sqjian/virtualization
+        repository: sqjian/artifact
         tags: "centos8"
         path: virtualization/docker/centos
         dockerfile: virtualization/docker/centos/centos8.dockerfile
@@ -25,7 +25,7 @@ jobs:
         username: ${{ secrets.ALY_DOCKER_USERNAME }}
         password: ${{ secrets.ALY_DOCKER_PASSWORD }}
         registry: registry.cn-hangzhou.aliyuncs.com
-        repository: sqjian/virtualization
+        repository: sqjian/artifact
         tags: "centos8"
         path: virtualization/docker/centos
         dockerfile: virtualization/docker/centos/centos8.dockerfile
