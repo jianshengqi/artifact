@@ -1,5 +1,5 @@
 name: centos8
-on: [release]
+on: [create]
 jobs:
   hub:
     runs-on: ubuntu-20.04

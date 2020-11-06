@@ -1,5 +1,5 @@
 name: ubuntu_18.04_iflytek
-on: [release]
+on: [create]
 jobs:
   hub:
     runs-on: ubuntu-18.04
