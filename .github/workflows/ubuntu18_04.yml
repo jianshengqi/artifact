@@ -18,7 +18,7 @@ jobs:
         repository: sqjian/virtualization
         tags: "ubuntu18_04"
         path: docker/ubuntu
-        dockerfile: docker/ubuntu/ubuntu18_04.dockerfile
+        dockerfile: virtualization/docker/ubuntu/ubuntu18_04.dockerfile
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
       with:
@@ -28,4 +28,4 @@ jobs:
         repository: sqjian/virtualization
         tags: "ubuntu18_04"
         path: docker/ubuntu
-        dockerfile: docker/ubuntu/ubuntu18_04.dockerfile
+        dockerfile: virtualization/docker/ubuntu/ubuntu18_04.dockerfile

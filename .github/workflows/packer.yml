@@ -21,7 +21,7 @@ jobs:
           sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
           sudo apt-get update && sudo apt-get install packer
           sudo packer version
-          sudo packer validate -syntax-only packer/ubuntu/ubuntu-18.04-amd64.json
-          sudo packer validate -syntax-only packer/ubuntu/ubuntu-20.04-amd64.json
-          sudo packer validate -syntax-only packer/centos/centos-7.8-x86_64.json
-          sudo packer validate -syntax-only packer/centos/centos-8.2-x86_64.json
+          sudo packer validate -syntax-only virtualization/packer/ubuntu/ubuntu-18.04-amd64.json
+          sudo packer validate -syntax-only virtualization/packer/ubuntu/ubuntu-20.04-amd64.json
+          sudo packer validate -syntax-only virtualization/packer/centos/centos-7.8-x86_64.json
+          sudo packer validate -syntax-only virtualization/packer/centos/centos-8.2-x86_64.json

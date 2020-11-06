@@ -18,7 +18,7 @@ jobs:
         repository: sqjian/virtualization
         tags: "centos8"
         path: docker/centos
-        dockerfile: docker/centos/centos7.dockerfile
+        dockerfile: virtualization/docker/centos/centos7.dockerfile
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
       with:
@@ -28,4 +28,4 @@ jobs:
         repository: sqjian/virtualization
         tags: "centos7"
         path: docker/centos
-        dockerfile: docker/centos/centos7.dockerfile
+        dockerfile: virtualization/docker/centos/centos7.dockerfile
