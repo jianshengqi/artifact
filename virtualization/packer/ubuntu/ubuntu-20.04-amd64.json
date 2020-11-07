@@ -71,6 +71,7 @@
         "{{template_dir}}/scripts/docker.sh",
         "{{template_dir}}/../common/go.sh",
         "{{template_dir}}/scripts/cpp.sh",
+        "{{template_dir}}/scripts/bpf.sh",
         "{{template_dir}}/../common/motd.sh",
         "{{template_dir}}/../common/sshd.sh",
         "{{template_dir}}/scripts/networking.sh",
