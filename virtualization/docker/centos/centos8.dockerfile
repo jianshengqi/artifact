@@ -4,8 +4,6 @@ WORKDIR /lab
 
 COPY scripts .
 
-ENV PS1='[docker-\u@\h \W]\$'
-
 RUN set -eux \
         && chmod +x *.sh \
         && ./common.sh \
