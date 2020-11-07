@@ -5,15 +5,15 @@ distro="`rpm -qf --queryformat '%{NAME}' /etc/redhat-release | cut -f 1 -d '-'`"
 
 major_version="`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/redhat-release | awk -F. '{print $1}'`";
 
-# make sure we use dnf on EL 8+
-if [ "$major_version" -ge 8 ]; then
+# make sure we use dnf on EL 7+
+if [ "$major_version" -ge 7 ]; then
   pkg_cmd="dnf"
 else
   pkg_cmd="yum"
 fi
 
 # remove previous kernels that yum/dnf preserved for rollback
-if [ "$major_version" -ge 8 ]; then
+if [ "$major_version" -ge 7 ]; then
   dnf autoremove -y
   dnf remove -y $(dnf repoquery --installonly --latest-limit=-1 -q)
 elif [ "$major_version" -gt 5 ]; then # yum-utils isn't in RHEL 5 so don't try to run this

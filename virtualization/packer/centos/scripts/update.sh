@@ -3,8 +3,8 @@
 # determine the major EL version we're runninng
 major_version="`sed 's/^.\+ release \([.0-9]\+\).*/\1/' /etc/redhat-release | awk -F. '{print $1}'`";
 
-# make sure we use dnf on EL 8+
-if [ "$major_version" -ge 8 ]; then
+# make sure we use dnf on EL 7+
+if [ "$major_version" -ge 7 ]; then
   dnf -y update
 else
   yum -y update
