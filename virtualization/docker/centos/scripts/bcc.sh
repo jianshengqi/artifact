@@ -1,3 +1,3 @@
 #!/bin/sh -eux
 
-yum install -y bcc-tools
+dnf install -y bcc-tools

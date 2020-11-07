@@ -1,8 +1,9 @@
 #!/bin/sh -eux
 
 cat >> /root/.bashrc <<EOF
+PS1='[docker-\u@\h \W]\$'
 . /etc/profile
 EOF
 
 rm -rf /tmp
-yum clean all
+dnf clean all
