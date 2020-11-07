@@ -6,6 +6,7 @@ COPY scripts .
 
 RUN set -eux \
         && chmod +x *.sh \
+        && ./dnf.sh \
         && ./common.sh \
         && ./cpp.sh \
         && ./go.sh \
