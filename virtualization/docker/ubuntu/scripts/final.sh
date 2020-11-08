@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 cat >> /root/.bashrc <<EOF
 . /etc/profile
-PS1='[docker-\u@\h \W]\$'
+PS1="docker=>${PS1}"
 EOF
 
 apt-get autoremove -y --purge

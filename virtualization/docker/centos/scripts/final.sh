@@ -2,7 +2,7 @@
 
 cat >> /root/.bashrc <<EOF
 . /etc/profile
-PS1='[docker-\u@\h \W]\$'
+PS1="docker=>${PS1}"
 EOF
 
 rm -rf /tmp
