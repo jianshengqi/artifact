@@ -1,8 +1,8 @@
 #!/bin/sh -eux
 
 cat >> /root/.bashrc <<EOF
-PS1='[docker-\u@\h \W]\$'
 . /etc/profile
+PS1='[docker-\u@\h \W]\$'
 EOF
 
 rm -rf /tmp
