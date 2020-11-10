@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 apt-get update -y
 apt-get upgrade -y
-apt-get install autoconf automake libtool curl make g++ unzip
+apt-get install -y autoconf automake libtool curl make g++ unzip
 
 PB_REL="https://github.com/protocolbuffers/protobuf/releases"
 PB_VER="3.13.0"
