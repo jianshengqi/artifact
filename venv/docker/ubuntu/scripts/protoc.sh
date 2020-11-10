@@ -12,7 +12,7 @@ curl -LO ${PB_REL}/download/v${PB_VER}/protoc-${PB_VER}-linux-x86_64.zip
 unzip protoc-${PB_VER}-linux-x86_64.zip -d ${HOME}/.local
 rm -f protoc-${PB_VER}-linux-x86_64.zip
 
-cat >> /etc/profile.d/protoc.sh <<EOF
+tee -a /etc/profile.d/protoc.sh <<-'EOF'
 # shellcheck shell=sh
 
 protoc_path=\${HOME}/.local/bin
