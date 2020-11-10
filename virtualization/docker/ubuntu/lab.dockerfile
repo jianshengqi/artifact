@@ -8,7 +8,6 @@ COPY scripts .
 
 RUN set -eux \
         && chmod +x *.sh \
-        && ./common.sh \
         && ./bcc.sh \
         && ./final.sh \
         && rm -rf *.sh
