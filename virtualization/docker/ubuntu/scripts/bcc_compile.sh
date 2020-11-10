@@ -24,7 +24,7 @@ git clone https://github.com/iovisor/bcc.git
 mkdir bcc/build; cd bcc/build
 cmake ..
 make
-sudo make install
+make install
 cmake -DPYTHON_CMD=python3 .. # build python3 binding
 pushd src/python/
 make
