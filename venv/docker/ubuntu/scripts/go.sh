@@ -22,22 +22,6 @@ if [ -n "\${PATH##*\${go_bin_path}}" -a -n "\${PATH##*\${go_bin_path}:*}" ]; the
 fi
 EOF
 
-cat /etc/profile.d/go.sh
-
-# cat >> /etc/profile.d/go.sh <<EOF
-# # shellcheck shell=sh
-# export GOROOT=/usr/local/go
-# export GOPATH=\${GOROOT}/mylib
-# export GOPROXY=https://goproxy.cn
-# export GO111MODULE=off
-# go_bin_path=\${GOPATH}/bin:\${GOROOT}/bin
-# if [ -n "\${PATH##*\${go_bin_path}}" -a -n "\${PATH##*\${go_bin_path}:*}" ]; then
-#     export PATH=\${PATH}:\${go_bin_path}
-# fi
-# EOF
-
-# cat /etc/profile.d/go.sh
-
 . /etc/profile
 
 # go-bindata

@@ -8,7 +8,6 @@ COPY scripts .
 
 RUN set -eux \
         && chmod +x *.sh \
-        && ./go.sh \
         && ./final.sh \
         && rm -rf *.sh
 
