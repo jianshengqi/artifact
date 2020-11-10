@@ -17,8 +17,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/artifact
         tags: "ubuntu20_04_iflytek"
-        path: virtualization/docker/ubuntu
-        dockerfile: virtualization/docker/ubuntu/ubuntu18_04_iflytek.dockerfile
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/ubuntu18_04_iflytek.dockerfile
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
       with:
@@ -27,5 +27,5 @@ jobs:
         registry: registry.cn-hangzhou.aliyuncs.com
         repository: sqjian/artifact
         tags: "ubuntu20_04_iflytek"
-        path: virtualization/docker/ubuntu
-        dockerfile: virtualization/docker/ubuntu/ubuntu18_04_iflytek.dockerfile
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/ubuntu18_04_iflytek.dockerfile

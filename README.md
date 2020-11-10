@@ -1,4 +1,4 @@
-## Ⅰ、virtualization
+## Ⅰ、venv
 
 ### ※ docker
 ![ubuntu_20.04_iflytek](https://github.com/jianshengqi/artifact/workflows/ubuntu_20.04_iflytek/badge.svg)  

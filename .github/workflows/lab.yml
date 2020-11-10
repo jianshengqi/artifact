@@ -17,8 +17,8 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: sqjian/artifact
         tags: "lab"
-        path: virtualization/docker/ubuntu
-        dockerfile: virtualization/docker/ubuntu/lab.dockerfile
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/lab.dockerfile
     - name: Build and push Docker images to aliyun hub
       uses: docker/build-push-action@v1
       with:
@@ -27,5 +27,5 @@ jobs:
         registry: registry.cn-hangzhou.aliyuncs.com
         repository: sqjian/artifact
         tags: "lab"
-        path: virtualization/docker/ubuntu
-        dockerfile: virtualization/docker/ubuntu/lab.dockerfile
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/lab.dockerfile
