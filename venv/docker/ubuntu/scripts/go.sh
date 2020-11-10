@@ -8,7 +8,7 @@ apt-get install -y curl git
 GO="https://dl.google.com/go/go1.15.4.linux-amd64.tar.gz"
 curl -o go.tgz $GO && tar xzf go.tgz -C /usr/local && rm -f go.tgz
 
-tee -a /etc/profile.d/go.sh <<-'EOF'
+tee -a /etc/profile.d/go.sh <<-EOF
 # shellcheck shell=sh
 
 export GOROOT=/usr/local/go
