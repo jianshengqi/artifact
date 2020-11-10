@@ -15,9 +15,9 @@ rm -f protoc-${PB_VER}-linux-x86_64.zip
 tee -a /etc/profile.d/protoc.sh <<-'EOF'
 # shellcheck shell=sh
 
-protoc_path=\${HOME}/.local/bin
+protoc_path=${HOME}/.local/bin
 
-if [ -n "\${PATH##*\${protoc_path}}" -a -n "\${PATH##*\${protoc_path}:*}" ]; then
-    export PATH=\${PATH}:\${protoc_path}
+if [ -n "${PATH##*${protoc_path}}" -a -n "${PATH##*${protoc_path}:*}" ]; then
+    export PATH=${PATH}:${protoc_path}
 fi
 EOF
