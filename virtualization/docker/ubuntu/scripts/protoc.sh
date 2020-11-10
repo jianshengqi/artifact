@@ -3,9 +3,10 @@
 export DEBIAN_FRONTEND=noninteractive
 
 PB_REL="https://github.com/protocolbuffers/protobuf/releases"
-curl -LO $PB_REL/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip
-unzip protoc-3.13.0-linux-x86_64.zip -d $HOME/.local
-rm -f protoc-3.13.0-linux-x86_64.zip
+PB_VER="3.13.0"
+curl -LO ${PB_REL}/download/${PB_VER}/protoc-${PB_VER}-linux-x86_64.zip
+unzip protoc-${PB_VER}-linux-x86_64.zip -d $HOME/.local
+rm -f protoc-${PB_VER}-linux-x86_64.zip
 
 cat >> /etc/profile.d/protoc.sh <<EOF
 # shellcheck shell=sh
