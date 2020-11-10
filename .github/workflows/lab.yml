@@ -19,13 +19,13 @@ jobs:
         tags: "lab"
         path: virtualization/docker/ubuntu
         dockerfile: virtualization/docker/ubuntu/lab.dockerfile
-    - name: Build and push Docker images to aliyun hub
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{ secrets.ALY_DOCKER_USERNAME }}
-        password: ${{ secrets.ALY_DOCKER_PASSWORD }}
-        registry: registry.cn-hangzhou.aliyuncs.com
-        repository: sqjian/artifact
-        tags: "lab"
-        path: virtualization/docker/ubuntu
-        dockerfile: virtualization/docker/ubuntu/lab.dockerfile
+    # - name: Build and push Docker images to aliyun hub
+    #   uses: docker/build-push-action@v1
+    #   with:
+    #     username: ${{ secrets.ALY_DOCKER_USERNAME }}
+    #     password: ${{ secrets.ALY_DOCKER_PASSWORD }}
+    #     registry: registry.cn-hangzhou.aliyuncs.com
+    #     repository: sqjian/artifact
+    #     tags: "lab"
+    #     path: virtualization/docker/ubuntu
+    #     dockerfile: virtualization/docker/ubuntu/lab.dockerfile
