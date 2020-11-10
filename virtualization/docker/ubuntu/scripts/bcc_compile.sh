@@ -12,9 +12,13 @@ apt-get install -y \
             flex \
             git \
             libedit-dev \
-            libllvm3.7 \
-            llvm-3.7-dev \
-            libclang-3.7-dev python zlib1g-dev libelf-dev
+            libllvm7 \
+            llvm-7-dev \
+            libclang-7-dev \
+            python \
+            zlib1g-dev \
+            libelf-dev \
+            libfl-dev
 
 git clone https://github.com/iovisor/bcc.git
 mkdir bcc/build; cd bcc/build
