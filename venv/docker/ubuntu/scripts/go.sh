@@ -22,6 +22,8 @@ if [ -n "\${PATH##*\${go_bin_path}}" -a -n "\${PATH##*\${go_bin_path}:*}" ]; the
 fi
 EOF
 
+cat /etc/profile.d/go.sh
+
 # cat >> /etc/profile.d/go.sh <<EOF
 # # shellcheck shell=sh
 # export GOROOT=/usr/local/go
