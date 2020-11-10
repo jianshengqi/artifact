@@ -1,5 +1,5 @@
 name: ubuntu_20.04
-on: [create]
+on: [push]
 jobs:
   hub:
     runs-on: ubuntu-20.04
