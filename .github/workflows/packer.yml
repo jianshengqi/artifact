@@ -1,5 +1,10 @@
 name: packer
-on: [create]
+
+on:
+  create:
+  schedule:
+    - cron: '0 0 */1 * *'
+
 jobs:
   inspect:
     runs-on: ubuntu-20.04

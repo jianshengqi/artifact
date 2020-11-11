@@ -3,7 +3,7 @@ name: lab
 on:
   push:
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '0 0 */1 * *'
 
 jobs:
   hub:
@@ -12,28 +12,28 @@ jobs:
     - name: timer
       run: |
           echo `date`
-    # - name: Checkout code
-    #   uses: actions/checkout@v2
-    # - name: dos2unix
-    #   run: |
-    #       sudo apt-get install -y dos2unix
-    #       find docker -type f | xargs dos2unix
-    # - name: Build and push Docker images to official hub
-    #   uses: docker/build-push-action@v1
-    #   with:
-    #     username: ${{ secrets.DOCKER_USERNAME }}
-    #     password: ${{ secrets.DOCKER_PASSWORD }}
-    #     repository: sqjian/artifact
-    #     tags: "lab"
-    #     path: venv/docker/ubuntu
-    #     dockerfile: venv/docker/ubuntu/lab.dockerfile
-    # - name: Build and push Docker images to aliyun hub
-    #   uses: docker/build-push-action@v1
-    #   with:
-    #     username: ${{ secrets.ALY_DOCKER_USERNAME }}
-    #     password: ${{ secrets.ALY_DOCKER_PASSWORD }}
-    #     registry: registry.cn-hangzhou.aliyuncs.com
-    #     repository: sqjian/artifact
-    #     tags: "lab"
-    #     path: venv/docker/ubuntu
-    #     dockerfile: venv/docker/ubuntu/lab.dockerfile
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: dos2unix
+      run: |
+          sudo apt-get install -y dos2unix
+          find docker -type f | xargs dos2unix
+    - name: Build and push Docker images to official hub
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: sqjian/artifact
+        tags: "lab"
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/lab.dockerfile
+    - name: Build and push Docker images to aliyun hub
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.ALY_DOCKER_USERNAME }}
+        password: ${{ secrets.ALY_DOCKER_PASSWORD }}
+        registry: registry.cn-hangzhou.aliyuncs.com
+        repository: sqjian/artifact
+        tags: "lab"
+        path: venv/docker/ubuntu
+        dockerfile: venv/docker/ubuntu/lab.dockerfile

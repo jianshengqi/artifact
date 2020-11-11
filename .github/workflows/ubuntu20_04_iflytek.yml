@@ -1,5 +1,10 @@
 name: ubuntu_20.04_iflytek
-on: [create]
+
+on:
+  create:
+  schedule:
+    - cron: '0 0 */1 * *'
+
 jobs:
   hub:
     runs-on: ubuntu-20.04
