@@ -7,7 +7,6 @@ jobs:
     - name: timer
       run: |
           echo `date`
-          find docker -type f | xargs dos2unix
     # - name: Checkout code
     #   uses: actions/checkout@v2
     # - name: dos2unix
