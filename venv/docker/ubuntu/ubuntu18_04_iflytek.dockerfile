@@ -12,6 +12,7 @@ RUN set -eux \
         && ./bcc.sh \
         && ./ats8.sh \
         && ./go.sh \
+        && ./bionic.sh \
         && ./protoc.sh \
         && ./ps1.sh \
         && ./final.sh \
