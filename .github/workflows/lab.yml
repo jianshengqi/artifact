@@ -3,7 +3,8 @@ name: lab
 on:
   push:
   schedule:
-    - cron '0 0 * * * ? *'
+    - cron: '0 0 * * * ? *'
+
 jobs:
   hub:
     runs-on: ubuntu-20.04
