@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -12,7 +12,6 @@ RUN set -eux \
         && ./bcc.sh \
         && ./ats8.sh \
         && ./go.sh \
-        && ./bionic.sh \
         && ./protoc.sh \
         && ./ps1.sh \
         && ./final.sh \
