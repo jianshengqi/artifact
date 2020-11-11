@@ -12,6 +12,7 @@ RUN set -eux \
         && ./bcc.sh \
         && ./go.sh \
         && ./protoc.sh \
+        && ./ps1.sh \
         && ./final.sh \
         && rm -rf *.sh
 

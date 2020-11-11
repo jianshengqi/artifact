@@ -3,8 +3,8 @@
 export DEBIAN_FRONTEND=noninteractive
 
 tee -a /root/.bashrc <<-'EOF'
+# reload system profile
 . /etc/profile
-PS1="docker=>${PS1}"
 EOF
 
 apt-get autoremove -y --purge
