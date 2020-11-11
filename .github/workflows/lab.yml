@@ -3,7 +3,7 @@ name: lab
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 0/6 * * * ?'
 
 jobs:
   hub:
