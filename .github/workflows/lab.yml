@@ -28,7 +28,6 @@ jobs:
       with:
         context: venv/docker/ubuntu
         file: venv/docker/ubuntu/lab.dockerfile
-        platforms: linux/amd64
         push: true
         tags: |
           sqjian/artifact:lab
