@@ -3,7 +3,7 @@ name: ubuntu_20.04
 on:
   create:
   schedule:
-    - cron: '0 0 */1 * *'
+    - cron: '0 16 */1 * *'
 
 jobs:
   hub:

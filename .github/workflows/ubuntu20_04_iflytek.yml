@@ -3,7 +3,7 @@ name: ubuntu_20.04_iflytek
 on:
   create:
   schedule:
-    - cron: '0 0 */1 * *'
+    - cron: '0 16 */1 * *'
 
 jobs:
   hub:
