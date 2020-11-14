@@ -4,7 +4,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y autoconf automake libtool curl make g++ unzip
+apt-get install -y autoconf automake libtool curl make g++ unzip git
 
 git clone https://github.com/wg/wrk.git ${HOME}/.wrk
 make -C ${HOME}/.wrk
