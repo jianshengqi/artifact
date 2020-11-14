@@ -44,4 +44,3 @@ jobs:
         push: true
         tags: |
           sqjian/artifact:lab
-          # registry.cn-hangzhou.aliyuncs.com/sqjian/artifact:lab
