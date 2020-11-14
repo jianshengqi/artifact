@@ -13,6 +13,7 @@ RUN set -eux \
         && ./ats8.sh \
         && ./go.sh \
         && ./protoc.sh \
+        && ./wrk.sh \
         && ./ps1.sh \
         && ./final.sh \
         && rm -rf *.sh
