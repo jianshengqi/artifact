@@ -48,7 +48,7 @@ jobs:
           git clone git@code.aliyun.com:sqjian/artifact.git
           cd artifact
           git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1
-          echo "update at `date`\n" >>readme.md
+          echo -e "update at `date`\n" >>readme.md
           git add -A
           git commit -m "update at `date`"
           git push
