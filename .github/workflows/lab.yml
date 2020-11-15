@@ -29,8 +29,9 @@ jobs:
     - name: Update tag 
       run: |
           cd artifact
+          echo update at `date` >>readme.md
           git add -A
-          git commit -m "`date`"
+          git commit -m "update at `date`"
           git push
 
   # hub:
