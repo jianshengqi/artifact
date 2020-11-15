@@ -35,7 +35,7 @@ jobs:
         tags: |
           sqjian/artifact:ubuntu20_04_iflytek
           
-    - name: git_mirror
+    - name: trigger_aliyun_ci
       env:
         token_Private_Keys: ${{ secrets.ALY_CODE_RSA }}
       run: |
