@@ -28,7 +28,6 @@ apt-get install -y \
             make \
             automake \
             autoconf \
-            vim \
             gawk  \
             git \
             unzip \
