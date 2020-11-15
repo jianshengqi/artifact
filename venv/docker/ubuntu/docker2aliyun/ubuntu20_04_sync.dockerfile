@@ -1,1 +1,0 @@
-FROM sqjian/artifact:ubuntu20_04
