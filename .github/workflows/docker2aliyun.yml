@@ -6,7 +6,7 @@ on:
     - cron: '0 16 */1 * *'
 
 jobs:
-  hub:
+  docker2aliyun:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout code
