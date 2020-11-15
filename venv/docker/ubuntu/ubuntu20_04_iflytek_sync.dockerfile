@@ -1,0 +1,1 @@
+FROM sqjian/artifact:ubuntu20_04_iflytek
