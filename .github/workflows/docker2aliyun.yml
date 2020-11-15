@@ -1,6 +1,7 @@
 name: ubuntu_20.04
 
 on:
+  push:
   schedule:
     - cron: '0 16 */1 * *'
 
