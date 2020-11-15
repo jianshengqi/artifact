@@ -13,6 +13,7 @@ RUN set -eux \
         && ./go.sh \
         && ./protoc.sh \
         && ./wrk.sh \
+        && ./tmux.sh \
         && ./ps1.sh \
         && ./final.sh \
         && rm -rf *.sh
