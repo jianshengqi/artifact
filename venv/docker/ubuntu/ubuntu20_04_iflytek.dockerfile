@@ -9,7 +9,6 @@ COPY scripts .
 RUN set -eux \
         && chmod +x *.sh \
         && ./common.sh \
-        && ./bcc.sh \
         && ./ats8.sh \
         && ./go.sh \
         && ./protoc.sh \

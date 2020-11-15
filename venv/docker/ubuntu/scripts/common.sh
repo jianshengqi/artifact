@@ -30,7 +30,6 @@ apt-get install -y \
             autoconf \
             vim \
             gawk  \
-            tmux \
             git \
             unzip \
             dstat \
