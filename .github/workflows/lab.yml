@@ -23,11 +23,8 @@ jobs:
         ssh-keyscan code.aliyun.com >> ~/.ssh/known_hosts
     - name: Get Latest Commit Message 
       run: |
-        git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
-    
-    - name: dos2unix
-      run: |
           git clone git@code.aliyun.com:sqjian/artifact.git
+          git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
 
   # hub:
   #   runs-on: ubuntu-20.04
