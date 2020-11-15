@@ -24,7 +24,7 @@ jobs:
     - name: Get Latest Commit Message 
       run: |
           git clone git@code.aliyun.com:sqjian/artifact.git
-          git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
+          cd artifact && git log --pretty=format:"%s from Github Actions at `date +"%Y-%m-%d %H:%M:%S"`" --date=short -n 1  > commit-message.log
 
   # hub:
   #   runs-on: ubuntu-20.04
