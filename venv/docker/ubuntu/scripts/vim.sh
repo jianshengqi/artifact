@@ -419,22 +419,13 @@ map <F5> :call CompileRunGcc()<CR>
 if has("win16") || has("win32")
     function! CompileRunGcc()
     	exec "w"
-    	if &filetype == 'c'
+    	if &filetype == 'c' || &filetype == 'cpp'
     		exec "!g++ % -o %<"
-    		exec "! ./%<"
-    	elseif &filetype == 'cpp'
-    		exec "!g++ % -o %<"
-    		exec "! ./%<"
-    	elseif &filetype == 'java' 
-    		exec "!javac %" 
-    		exec "!java %<"
-    	elseif &filetype == 'sh'
-    		:!./%
+    		exec "! %<"
     	elseif &filetype == 'python'
     		exec "!python %"
     	elseif &filetype == 'go'
-    		exec "!go build %"
-    		exec "! ./%<"
+    		exec "!go run %"
         else
             exec "!echo %filetype% format is not supported"
     	endif
@@ -442,20 +433,13 @@ if has("win16") || has("win32")
 else
     function! CompileRunGcc()
     	exec "w"
-    	if &filetype == 'c'
+    	if &filetype == 'c' || &filetype == 'cpp'
     		exec "!g++ % -o %<"
     		exec "! ./%<"
-    	elseif &filetype == 'cpp'
-    		exec "!g++ % -o %<"
-    		exec "! ./%<"
-    	elseif &filetype == 'java' 
-    		exec "!javac %" 
-    		exec "!java %<"
     	elseif &filetype == 'sh'
     		:!./%
     	elseif &filetype == 'python'
     		exec "!python %"
-    		exec "!python %<"
     	elseif &filetype == 'go'
     		exec "!go build %"
     		exec "! ./%<"
@@ -474,6 +458,7 @@ if has("autocmd")
        hi def link LogE LogE_color
        hi def link LogW LogW_color
     endfunc
+    autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
     autocmd BufRead,BufNewFile *.log set filetype=log
     autocmd BufRead,BufNewFile *.log call LogSyntax()
     autocmd FileType log call LogSyntax()
