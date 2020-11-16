@@ -16,6 +16,7 @@ RUN set -eux \
         && ./wrk.sh \
         && ./tmux.sh \
         && ./ps1.sh \
+        && ./alias.sh \
         && ./final.sh \
         && rm -rf *.sh
 
