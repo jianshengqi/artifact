@@ -15,5 +15,6 @@ apt-get install -y \
             llvm \
             clang
 
+# usdt lib:systemtap-sdt-dev
 apt-get install -y \
             systemtap-sdt-dev
