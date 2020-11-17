@@ -6,17 +6,6 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y \
             build-essential \
-            pkg-config \
-            libxml2-dev \
-            apt-utils \
-            software-properties-common \
-            build-essential \
-            freetds-dev \
-            libkrb5-dev \
-            libsasl2-dev \
-            libssl-dev \
-            libffi-dev \
-            libpq-dev \
             binutils \
             net-tools \
             inetutils-ping \
@@ -24,7 +13,6 @@ apt-get install -y \
             gcc \
             g++ \
             gdb \
-            lsb-core \
             make \
             automake \
             autoconf \
@@ -39,11 +27,8 @@ apt-get install -y \
             axel \
             lrzsz \
             graphviz \
-            freetds-bin \
             rsync \
             netcat \
-            locales \
-            gnupg2 \
             dos2unix \
             llvm \
             clang \
