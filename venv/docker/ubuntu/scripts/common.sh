@@ -19,7 +19,6 @@ apt-get install -y \
             curl \
             axel \
             lrzsz \
-            graphviz \
             rsync \
             netcat \
             dos2unix \

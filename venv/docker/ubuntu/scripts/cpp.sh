@@ -14,3 +14,6 @@ apt-get install -y \
             autoconf \
             llvm \
             clang
+
+apt-get install -y \
+            systemtap-sdt-dev
