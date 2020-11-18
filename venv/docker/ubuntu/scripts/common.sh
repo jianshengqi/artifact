@@ -24,5 +24,4 @@ apt-get install -y \
             dos2unix \
             silversearcher-ag \
             dumb-init \
-            nmap \
-            ca-certificates
+            nmap
