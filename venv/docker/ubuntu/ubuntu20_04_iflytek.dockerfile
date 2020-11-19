@@ -14,7 +14,6 @@ RUN set -eux \
         && ./ats8.sh \
         && ./go.sh \
         && ./protoc.sh \
-        && ./wrk.sh \
         && ./tmux.sh \
         && ./ps1.sh \
         && ./alias.sh \

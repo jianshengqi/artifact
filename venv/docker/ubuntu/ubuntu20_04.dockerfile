@@ -14,7 +14,6 @@ RUN set -eux \
         && ./bcc.sh \
         && ./go.sh \
         && ./protoc.sh \
-        && ./wrk.sh \
         && ./tmux.sh \
         && ./ps1.sh \
         && ./alias.sh \
