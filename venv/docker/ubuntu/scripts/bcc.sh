@@ -10,6 +10,7 @@ apt-get install -y build-essential git make libelf-dev libbfd-dev clang strace t
 
 SRC=/kernel-src
 git clone --depth 1 git://kernel.ubuntu.com/ubuntu/ubuntu-focal.git ${SRC}
+rm -rf ${SRC}/.git
 cd ${SRC}/tools/lib/bpf
 make && make install prefix=/usr/local
 cd ${SRC}/tools/bpf/bpftool
