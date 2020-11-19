@@ -17,6 +17,16 @@ curl -L ${tmux} | tar -zx --strip-components 1
 ./configure
 make && make install
 
+apt-get autoremove -y --purge
+apt-get clean
+rm -rf \
+ /var/lib/apt/lists/* \
+ /tmp/* \
+ /var/tmp/* \
+ /usr/share/man \
+ /usr/share/doc \
+ /usr/share/doc-base
+
 tee ~/.tmux.conf <<-'EOF'
 set-option -g mouse on             # 开启鼠标支持
 set -g default-shell /usr/bin/bash # 设置默认shell

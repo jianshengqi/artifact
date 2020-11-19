@@ -7,19 +7,45 @@ WORKDIR /lab
 COPY scripts .
 
 RUN set -eux \
-        && chmod +x *.sh \
-        && ./common.sh \
-        && ./cpp.sh \
-        && ./vim.sh \
-        && ./ats8.sh \
-        && ./bcc.sh \
-        && ./go.sh \
-        && ./protoc.sh \
-        && ./wrk.sh \
-        && ./tmux.sh \
-        && ./ps1.sh \
-        && ./alias.sh \
-        && ./final.sh \
+        && chmod +x *.sh
+
+RUN set -eux \
+        && ./common.sh
+
+RUN set -eux \
+        && ./cpp.sh
+
+RUN set -eux \
+        && ./vim.sh
+
+RUN set -eux \
+        && ./ats8.sh
+
+RUN set -eux \
+        && ./bcc.sh
+
+RUN set -eux \
+        && ./go.sh
+
+RUN set -eux \
+        && ./protoc.sh
+
+RUN set -eux \
+        && ./wrk.sh
+
+RUN set -eux \
+        && ./tmux.sh
+
+RUN set -eux \
+        && ./ps1.sh
+
+RUN set -eux \
+        && ./alias.sh
+
+RUN set -eux \
+        && ./env.sh
+
+RUN set -eux \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]

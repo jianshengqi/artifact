@@ -18,7 +18,7 @@ RUN set -eux \
         && ./tmux.sh \
         && ./ps1.sh \
         && ./alias.sh \
-        && ./final.sh \
+        && ./env.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]

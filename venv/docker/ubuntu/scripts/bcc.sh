@@ -15,3 +15,13 @@ make && make install prefix=/usr/local
 cd ${SRC}/tools/bpf/bpftool
 make && make install prefix=/usr/local
 mv /usr/local/lib64/libbpf.* /lib/x86_64-linux-gnu/
+
+apt-get autoremove -y --purge
+apt-get clean
+rm -rf \
+ /var/lib/apt/lists/* \
+ /tmp/* \
+ /var/tmp/* \
+ /usr/share/man \
+ /usr/share/doc \
+ /usr/share/doc-base

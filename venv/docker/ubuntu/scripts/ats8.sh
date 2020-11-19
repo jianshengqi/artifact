@@ -34,3 +34,13 @@ cd /tmp/trafficserver
 curl -L ${ats} | tar -xj --strip-components 1
 ./configure --prefix=/opt/ats
 make install
+
+apt-get autoremove -y --purge
+apt-get clean
+rm -rf \
+ /var/lib/apt/lists/* \
+ /tmp/* \
+ /var/tmp/* \
+ /usr/share/man \
+ /usr/share/doc \
+ /usr/share/doc-base
