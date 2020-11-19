@@ -8,6 +8,17 @@ COPY scripts .
 
 RUN set -eux \
         && chmod +x *.sh \
+        && ./common.sh \
+        && ./cpp.sh \
+        && ./vim.sh \
+        && ./ats8.sh \
+        && ./bcc.sh \
+        && ./go.sh \
+        && ./protoc.sh \
+        && ./wrk.sh \
+        && ./tmux.sh \
+        && ./ps1.sh \
+        && ./alias.sh \
         && ./final.sh \
         && rm -rf *.sh
 
