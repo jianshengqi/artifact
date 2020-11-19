@@ -30,9 +30,6 @@ RUN set -eux \
 RUN set -eux \
         && ./protoc.sh
 
-# RUN set -eux \
-#         && ./wrk.sh
-
 RUN set -eux \
         && ./tmux.sh
 
