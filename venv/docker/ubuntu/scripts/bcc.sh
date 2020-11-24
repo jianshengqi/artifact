@@ -17,6 +17,11 @@ cd ${SRC}/tools/bpf/bpftool
 make && make install prefix=/usr/local
 cp /usr/local/lib64/libbpf.* /lib/x86_64-linux-gnu/
 
+
+git clone https://github.com/libbpf/libbpf.git
+cd libbpf
+make && make install && rm -rf libbpf
+
 apt-get autoremove -y --purge
 apt-get clean
 rm -rf \
