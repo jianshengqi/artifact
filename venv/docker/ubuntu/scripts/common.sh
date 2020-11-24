@@ -21,6 +21,7 @@ apt-get install -y \
             lrzsz \
             rsync \
             netcat \
+            telnet \
             dos2unix \
             silversearcher-ag \
             dumb-init \
