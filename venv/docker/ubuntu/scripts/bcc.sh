@@ -19,7 +19,7 @@ cp /usr/local/lib64/libbpf.* /lib/x86_64-linux-gnu/
 
 
 git clone https://github.com/libbpf/libbpf.git
-cd libbpf
+cd libbpf/src
 make && make install && rm -rf libbpf
 
 apt-get autoremove -y --purge
