@@ -11,6 +11,7 @@ apt-get install -y \
             gdb \
             make \
             automake \
+            cmake \
             autoconf \
             llvm \
             clang

@@ -14,18 +14,14 @@ apt-get install -y \
             unzip \
             dstat \
             jq \
-            htop \
             wget \
             curl \
-            axel \
             lrzsz \
             rsync \
             netcat \
-            telnet \
             dos2unix \
             silversearcher-ag \
-            dumb-init \
-            nmap
+            dumb-init
 
 apt-get autoremove -y --purge
 apt-get clean

@@ -22,12 +22,6 @@ if [ -n "${PATH##*${go_bin_path}}" -a -n "${PATH##*${go_bin_path}:*}" ]; then
 fi
 EOF
 
-. /etc/profile
-
-# go-bindata
-go get -u github.com/jteeuwen/go-bindata/...
-mv $GOPATH/bin/go-bindata /usr/local/bin
-
 apt-get autoremove -y --purge
 apt-get clean
 rm -rf \
