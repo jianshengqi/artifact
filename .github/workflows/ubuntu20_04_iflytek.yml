@@ -29,8 +29,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: venv/docker/ubuntu
-        file: venv/docker/ubuntu/ubuntu20_04_iflytek.dockerfile
+        context: docker/ubuntu
+        file: docker/ubuntu/ubuntu20_04_iflytek.dockerfile
         push: true
         tags: |
           sqjian/artifact:ubuntu20_04_iflytek
