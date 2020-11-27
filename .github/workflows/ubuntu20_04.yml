@@ -32,7 +32,7 @@ jobs:
         file: docker/ubuntu/ubuntu20_04.dockerfile
         push: true
         tags: |
-          sqjian/artifact:ubuntu20_04
+          sqjian/venv:ubuntu20_04
           
     - name: trigger_aliyun_ci
       env:

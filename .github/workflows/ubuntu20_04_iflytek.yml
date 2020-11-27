@@ -33,7 +33,7 @@ jobs:
         file: docker/ubuntu/ubuntu20_04_iflytek.dockerfile
         push: true
         tags: |
-          sqjian/artifact:ubuntu20_04_iflytek
+          sqjian/venv:ubuntu20_04_iflytek
           
     - name: trigger_aliyun_ci
       env:
