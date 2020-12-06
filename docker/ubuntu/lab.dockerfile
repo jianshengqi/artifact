@@ -10,8 +10,6 @@ RUN set -eux && chmod +x *.sh
 
 RUN set -eux && ./test.sh
 
-RUN set -eux && ./ps1.sh
-
 RUN set -eux && ./env.sh
 
 RUN set -eux && rm -rf *.sh
