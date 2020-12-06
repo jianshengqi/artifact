@@ -15,9 +15,8 @@ RUN set -eux \
         && ./go.sh \
         && ./protoc.sh \
         && ./tmux.sh \
-        && ./ps1.sh \
-        && ./alias.sh \
         && ./env.sh \
+        && ./cleanup.sh \
         && rm -rf *.sh
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
