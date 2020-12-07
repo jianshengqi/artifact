@@ -3,20 +3,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-tee -a /etc/profile.d/ps1.sh <<-'EOF'
-PS1="docker=>${PS1}"
-EOF
-
-tee -a /etc/profile.d/alias.sh <<-'EOF'
-# shellcheck shell=sh
-alias python='python3'
-EOF
-
-tee -a /root/.bashrc <<-'END'
-# reload system profile
-. /etc/profile
-
-sqjian=$(cat <<- 'EOF'
+tee -a /etc/motd <<- 'EOF'
 -------------------------------------
    / \__
   (    @\___
@@ -27,11 +14,18 @@ sqjian=$(cat <<- 'EOF'
 This system is built by the sqjian
 -------------------------------------
 EOF
-)
 
-cat << EOF
-$sqjian
+tee -a /etc/profile.d/ps1.sh <<-'EOF'
+PS1="docker=>${PS1}"
 EOF
+
+tee -a /etc/profile.d/alias.sh <<-'EOF'
+# shellcheck shell=sh
+alias python='python3'
+EOF
+
+tee -a /etc/bash.bashrc <<-'END'
+[ ! -z "$TERM" -a -r /etc/motd ] && cat /etc/motd
 END
 
 tee /etc/apt/sources.list <<- 'EOF'
