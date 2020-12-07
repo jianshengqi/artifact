@@ -12,10 +12,27 @@ tee -a /etc/profile.d/alias.sh <<-'EOF'
 alias python='python3'
 EOF
 
-tee -a /root/.bashrc <<-'EOF'
+tee -a /root/.bashrc <<-'END'
 # reload system profile
 . /etc/profile
+
+sqjian=$(cat <<- 'EOF'
+-------------------------------------
+   / \__
+  (    @\___
+  /         O
+ /   (_____/
+/_____/   U
+
+This system is built by the sqjian
+-------------------------------------
 EOF
+)
+
+cat << EOF
+$sqjian
+EOF
+END
 
 tee /etc/apt/sources.list <<- 'EOF'
 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
