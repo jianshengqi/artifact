@@ -6,7 +6,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y gnupg gnupg1 gnupg2 lsb-core
 apt-get install -y bpfcc-tools bpftrace
-apt-get install -y build-essential git make libelf-dev libbfd-dev clang strace tar gcc-multilib kmod
+apt-get install -y build-essential git make libelf-dev libbfd-dev clang strace tar gcc-multilib kmod pkg-config
 
 SRC=/kernel-src
 git clone --depth 1 git://kernel.ubuntu.com/ubuntu/ubuntu-focal.git ${SRC}
