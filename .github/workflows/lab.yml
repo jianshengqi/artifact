@@ -20,6 +20,7 @@ jobs:
       run: |
           sudo apt-get install -y dos2unix
           find -type f -name *.sh| xargs dos2unix
+          echo todo
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
