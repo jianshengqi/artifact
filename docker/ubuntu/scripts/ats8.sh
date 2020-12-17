@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-ats=http://www-eu.apache.org/dist/trafficserver/trafficserver-8.0.8.tar.bz2
+ats=http://www-eu.apache.org/dist/trafficserver/trafficserver-8.1.1.tar.bz2
 
 apt-get update -y
 apt-get upgrade -y
