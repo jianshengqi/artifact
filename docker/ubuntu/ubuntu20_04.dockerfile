@@ -11,7 +11,6 @@ RUN set -eux \
         && ./common.sh \
         && ./cpp.sh \
         && ./vim.sh \
-        && ./bcc.sh \
         && ./go.sh \
         && ./protoc.sh \
         && ./tmux.sh \
