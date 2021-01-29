@@ -68,6 +68,8 @@
       "scripts": [
         "{{template_dir}}/scripts/update.sh",
         "{{template_dir}}/scripts/common.sh",
+        "{{template_dir}}/scripts/tmux.sh",
+        "{{template_dir}}/scripts/vim.sh",
         "{{template_dir}}/scripts/docker.sh",
         "{{template_dir}}/../common/motd.sh",
         "{{template_dir}}/../common/sshd.sh",
