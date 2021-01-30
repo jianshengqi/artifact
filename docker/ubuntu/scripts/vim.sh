@@ -37,12 +37,12 @@ let mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file 
+" :W sudo saves the file
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
-" 共享剪贴板  
-"set clipboard+=unnamed 
+" 共享剪贴板
+"set clipboard+=unnamed
 
 " keymap
 " inoremap ( ()<Esc>i
@@ -72,7 +72,7 @@ set wildmenu
 set so=7
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
+let $LANG='en'
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
@@ -104,23 +104,23 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -140,10 +140,10 @@ endif
 set foldcolumn=1
 
 if has("autocmd")
-    " 用浅色高亮当前行  
+    " 用浅色高亮当前行
     autocmd InsertLeave * se nocul
-    
-    " 用浅色高亮当前行  
+
+    " 用浅色高亮当前行
     autocmd InsertEnter * se cul
 endif
 
@@ -151,7 +151,7 @@ endif
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -259,8 +259,8 @@ map <leader>h :bprevious<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>t<leader> :tabnext 
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -275,7 +275,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -287,15 +287,15 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 autocmd BufNewFile *.go exec ":call SetTitle()"
     func SetTitle()
-        call setline(1,"/**") 
+        call setline(1,"/**")
         call append(line("."), " *   Copyright (C) ".strftime("%Y")." All rights reserved.")
-        call append(line(".")+1, " *") 
-        call append(line(".")+2, " *   FileName      ：".expand("%:t")) 
+        call append(line(".")+1, " *")
+        call append(line(".")+2, " *   FileName      ：".expand("%:t"))
         call append(line(".")+3, " *   Author        ：sqjian")
         call append(line(".")+4, " *   Email         ：shengqi.jian@qq.com")
-        call append(line(".")+5, " *   Date          ：".strftime("%Y年%m月%d日")) 
-        call append(line(".")+6, " *   Description   ：") 
-        call append(line(".")+7, " */") 
+        call append(line(".")+5, " *   Date          ：".strftime("%Y年%m月%d日"))
+        call append(line(".")+6, " *   Description   ：")
+        call append(line(".")+7, " */")
     endfunc
 "自动将光标定位到末尾"
 autocmd BufNewFile * normal G
@@ -303,12 +303,60 @@ autocmd BufNewFile * normal G
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
+" status bar colors
+hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
+if has("autocmd")
+    autocmd InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
+    autocmd InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
+endif
 
-" Format the status line
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ [Format=%{&ff}:%{&fenc!=''?&fenc:&enc}]\ [Type=%y]\ [Pos:%03c:%03l/%03L(%p%%)]
+" Status line
+" default: set statusline=%f\ %h%w%m%r\ %=%(%l,%c%V\ %=\ %P%)
+
+" Status Line Custom
+let g:currentmode={
+    \ 'n'  : 'Normal',
+    \ 'no' : 'Normal·Operator Pending',
+    \ 'v'  : 'Visual',
+    \ 'V'  : 'V·Line',
+    \ '^V' : 'V·Block',
+    \ 's'  : 'Select',
+    \ 'S'  : 'S·Line',
+    \ '^S' : 'S·Block',
+    \ 'i'  : 'Insert',
+    \ 'R'  : 'Replace',
+    \ 'Rv' : 'V·Replace',
+    \ 'c'  : 'Command',
+    \ 'cv' : 'Vim Ex',
+    \ 'ce' : 'Ex',
+    \ 'r'  : 'Prompt',
+    \ 'rm' : 'More',
+    \ 'r?' : 'Confirm',
+    \ '!'  : 'Shell',
+    \ 't'  : 'Terminal'
+    \}
+
+set laststatus=2
+set noshowmode
+set statusline=
+set statusline+=%0*\ %n\                                              " Buffer number
+set statusline+=%1*\ %<%F%m%r%h%w\                                    " File path, modified, readonly, helpfile, preview
+set statusline+=%3*│                                                  " Separator
+set statusline+=%2*\ %Y\                                              " FileType
+set statusline+=%3*│                                                  " Separator
+set statusline+=%2*\ %{''.(&fenc!=''?&fenc:&enc).''}                  " Encoding
+set statusline+=\ (%{&ff})                                            " FileFormat (dos/unix..)
+set statusline+=\%2*\ %{tolower(HasPaste())}                                            " FileFormat (dos/unix..)
+set statusline+=%=                                                    " Right Side
+set statusline+=%2*\ col:\ %02v\                                      " Colomn number
+set statusline+=%3*│                                                  " Separator
+set statusline+=%1*\ ln:\ %02l/%L\ (%3p%%)\                           " Line number / total lines, percentage of document
+set statusline+=%0*\ %{toupper(g:currentmode[mode()])}\               " The current mode
+
+hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
+hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
+hi User3 ctermfg=236 ctermbg=236 guibg=#303030 guifg=#303030
+hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -378,9 +426,9 @@ map <leader>pp :setlocal paste!<cr>
 " Returns true if paste mode is enabled
 function! HasPaste()
     if &paste
-        return 'PASTE MODE  '
+        return '| PASTE MODE |'
     endif
-    return ''
+    return '| NO PASTE MODE |'
 endfunction
 
 " Don't close window, when deleting a buffer
@@ -406,7 +454,7 @@ endfunction
 
 function! CmdLine(str)
     call feedkeys(":" . a:str)
-endfunction 
+endfunction
 
 function! VisualSelection(direction, extra_filter) range
     let l:saved_reg = @"
