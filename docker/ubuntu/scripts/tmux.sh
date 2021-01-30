@@ -27,7 +27,7 @@ rm -rf \
  /usr/share/doc \
  /usr/share/doc-base
 
-tee ~/.tmux.conf <<-'EOF'
+tee /etc/tmux.conf <<-'EOF'
 set-option -g mouse on             # 开启鼠标支持
 set -g default-shell /usr/bin/bash # 设置默认shell
 set -g base-index 1                # 窗口编号从 1 开始计数

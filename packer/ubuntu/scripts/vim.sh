@@ -6,7 +6,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y vim
 
-tee ~/.vimrc <<-'EOF'
+tee /etc/vim/vimrc.local <<-'EOF'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
