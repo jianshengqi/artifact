@@ -66,8 +66,6 @@ set -g set-clipboard on                       # 开启剪切板
 set -g display-panes-time 800                 # 稍长的窗格中显示的时间指标
 set -g display-time 1000                      # 稍长的状态消息的显示时间，单位为毫秒
 set -g renumber-windows on                    # 关掉某个窗口后，编号重排
-set -g status-right-length "100"              # 状态栏右边长度
-set -g status-right "#[bg=default]#[fg=black] %a %B %-d, %Y #[fg=black].:. #[fg=black]%H:%M #[fg=black,bg=default] #h " # 24 hour time: `%H:%M`,12 hour time: `%-I:%M %p`       # 状态栏右侧内容
 setw -g automatic-rename on                                                                                                                                                     # 重命名窗口，以反映当前的程序
 setw -g monitor-activity on                                                                                                                                                     # 开启窗口活动监视
 setw -g clock-mode-style 24                                                                                                                                                     # 24小时显示方式
