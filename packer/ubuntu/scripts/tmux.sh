@@ -40,7 +40,8 @@ bind -r ^j resizep -D 5 # 绑定Ctrl+j为往↓调整面板边缘5个单元格
 bind -r ^h resizep -L 5 # 绑定Ctrl+h为往←调整面板边缘5个单元格
 bind -r ^l resizep -R 5 # 绑定Ctrl+l为往→调整面板边缘5个单元格
 
-set  -g status-style bg='#0C8A92',fg=black # 底部命令或者状态栏的颜色
-set  -g pane-border-style fg='green',bg=black	# 设置边界颜色（bg背景颜色， fg为线条颜色）
+# set  -g status-style fg=black,bg='#0C8A92', # 底部命令或者状态栏的颜色
+set  -g status-style fg=black,bg='#00E5EE', # 底部命令或者状态栏的颜色
+set  -g pane-border-style fg=green,bg=black	# 设置边界颜色（bg背景颜色， fg为线条颜色）
 set  -g pane-active-border-style fg=magenta,bg=default # 设置正在使用的窗口的边界颜色，在不同窗口切换时边界颜色会变化
 EOF
