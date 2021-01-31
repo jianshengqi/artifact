@@ -59,8 +59,10 @@ set-option -g pane-border-style fg='#747474',bg=default        # 设置边界颜
 set-option -g pane-active-border-style fg='magenta',bg=default # 设置正在使用的窗口的边界颜色，在不同窗口切换时边界颜色会变化
 
 # 状态栏
+set-option -g status on                                                # 启用状态栏
+set-option -g status-position bottom                                   # 状态栏置于底部
 set-option -g status-justify "left"                                    # 窗口列表居中显示
-set-option -g status-left '[#{session_name}]'                          # 状态栏左方的内容
+set-option -g status-left '[#{session_name}] '                         # 状态栏左方的内容
 set-option -g status-right '[#[fg=white]#(date +" %m-%d %H:%M ")]'     # 状态栏右方的内容；这里的设置将得到类似23:59的显示
 set-option -g status-left-length 10                                    # 状态栏左方的内容长度；
 set-option -g status-right-length 15                                   # 状态栏右方的内容长度；建议把更多的空间留给状态栏左方（用于列出当前窗口）
