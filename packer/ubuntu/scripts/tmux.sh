@@ -66,7 +66,7 @@ set-option -g status on                                                         
 set-option -g status-position bottom                                                                                                                                  # 状态栏置于底部
 set-option -g status-style fg=colour137,bg=colour234                                                                                                                  # 底部命令或者状态栏的颜色
 set-option -g status-justify "left"                                                                                                                                   # 窗口列表居中显示
-set-option -g status-left '[#{session_name}] '                                                                                                                        # 状态栏左方的内容
+set-option -g status-left '#[fg=red,bold][#{session_name}] '                                                                                                                        # 状态栏左方的内容
 set-option -g status-right "#[fg=colour215,nobold]#H #[bold]$wg_is_keys_off#[fg=colour15,bg=colour236,nobold] %e %B %Y #[fg=colour233,bg=colour245,nobold] %H:%M "    # 状态栏右方的内容；这里的设置将得到类似23:59的显示
 set-option -g status-left-length 10                                                                                                                                   # 状态栏左方的内容长度；
 set-option -g status-right-length 50                                                                                                                                  # 状态栏右方的内容长度；建议把更多的空间留给状态栏左方（用于列出当前窗口）
