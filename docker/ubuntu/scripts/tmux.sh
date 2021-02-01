@@ -29,7 +29,7 @@ rm -rf \
 
 tee /etc/tmux.conf <<-'EOF'
 # 基础设置
-set-option -g default-shell /bin/bash
+set-option -g default-shell $SHELL
 set-option -g default-terminal "screen-256color"           # 设置终端缺省的支持颜色为256色
 set-option -g base-index 1                                 # 窗口编号从 1 开始计数
 set-option -g pane-base-index 1                            # 窗格编号从 1 开始计数
