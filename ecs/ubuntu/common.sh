@@ -21,5 +21,4 @@ apt-get install -y \
             netcat \
             dos2unix \
             silversearcher-ag \
-            expect \
-            dumb-init
+            expect
