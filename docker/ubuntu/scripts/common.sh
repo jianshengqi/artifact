@@ -20,7 +20,6 @@ apt-get install -y \
             rsync \
             netcat \
             dos2unix \
-            silversearcher-ag \
             expect \
             dumb-init
 
