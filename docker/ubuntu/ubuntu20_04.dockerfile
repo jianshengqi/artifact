@@ -14,6 +14,7 @@ RUN set -eux \
         && ./go.sh \
         && ./protoc.sh \
         && ./tmux.sh \
+        && ./ripgrep.sh \
         && ./env.sh \
         && rm -rf *.sh
 
