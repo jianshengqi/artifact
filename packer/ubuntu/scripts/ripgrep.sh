@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-set -eux
+#!/bin/sh -eux
 
 WORKDIR='/tmp/ripgrep'
 if [ ! -d ${WORKDIR} ]; then
