@@ -20,7 +20,7 @@ apt-get install -y \
             rsync \
             netcat \
             dos2unix \
-            expect \
+            libxml2-dev \
             dumb-init
 
 apt-get autoremove -y --purge
