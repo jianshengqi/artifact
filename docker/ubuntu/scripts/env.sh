@@ -11,7 +11,7 @@ tee -a /etc/motd <<- 'EOF'
  /   (_____/
 /_____/   U
 
-This system is built by the sqjian
+This system is built by the doge
 -------------------------------------
 EOF
 
