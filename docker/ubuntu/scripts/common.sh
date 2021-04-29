@@ -21,6 +21,7 @@ apt-get install -y \
             netcat \
             dos2unix \
             libxml2-dev \
+            tree \
             dumb-init
 
 apt-get autoremove -y --purge
