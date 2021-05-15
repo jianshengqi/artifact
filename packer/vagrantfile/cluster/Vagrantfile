@@ -6,7 +6,7 @@ Vagrant.configure('2') do |config|
   config.vm.box_check_update = false
 
   config.vm.provision "shell", name: "docker", path: "provision/docker.sh"
-  config.vm.provision "shell", name: "bashrc", path: "provision/bashrc.sh"
+  config.vm.provision "shell", name: "alias", path: "provision/alias.sh"
   config.vm.provision "shell", name: "pip", path: "provision/pip.sh"
 
   config.vm.synced_folder ".", "/vagrant", disabled: false
