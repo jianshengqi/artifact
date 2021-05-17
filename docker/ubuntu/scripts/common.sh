@@ -18,7 +18,6 @@ apt-get install -y \
             curl \
             lrzsz \
             rsync \
-            netcat \
             dos2unix \
             tree \
             dumb-init
