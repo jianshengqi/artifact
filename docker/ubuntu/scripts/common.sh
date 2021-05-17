@@ -20,7 +20,6 @@ apt-get install -y \
             rsync \
             netcat \
             dos2unix \
-            libxml2-dev \
             tree \
             dumb-init
 
