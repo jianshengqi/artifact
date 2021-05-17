@@ -6,7 +6,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
 
-tmux='https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.1c.tar.gz'
+tmux='https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.2.tar.gz'
 
 if [ ! -d "/tmp/tmux" ]; then
   mkdir -p /tmp/tmux
