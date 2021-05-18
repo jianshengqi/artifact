@@ -13,7 +13,6 @@ RUN set -eux \
         && ./vim.sh \
         && ./go.sh \
         && ./protoc.sh \
-        && ./tmux.sh \
         && ./ripgrep.sh \
         && ./env.sh \
         && rm -rf *.sh
