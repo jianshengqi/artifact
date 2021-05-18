@@ -12,9 +12,7 @@ apt-get install -y \
             make \
             automake \
             cmake \
-            autoconf \
-            llvm \
-            clang
+            autoconf
 
 # usdt lib:systemtap-sdt-dev
 apt-get install -y \
