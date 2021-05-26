@@ -37,4 +37,7 @@ apt-get -y update;
 # Upgrade all installed packages incl. kernel and kernel headers
 apt-get -y dist-upgrade -o Dpkg::Options::="--force-confnew";
 
+# Upgrade kernel to 5.8
+apt-get install -y linux-image-5.8.0-28-generic
+
 reboot
