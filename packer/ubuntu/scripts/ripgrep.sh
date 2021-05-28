@@ -6,6 +6,6 @@ if [ ! -d ${WORKDIR} ]; then
 fi
 
 cd ${WORKDIR}
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
+curl --retry 3 -LO https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep_12.1.1_amd64.deb
 dpkg -i ripgrep_12.1.1_amd64.deb
 rm -rf *.deb

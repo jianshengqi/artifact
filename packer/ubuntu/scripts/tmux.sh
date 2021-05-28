@@ -14,7 +14,7 @@ if [ ! -d "/tmp/tmux" ]; then
 fi
 
 cd /tmp/tmux
-curl -L ${tmux} | tar -zx --strip-components 1
+curl --retry 3 -L ${tmux} | tar -zx --strip-components 1
 ./configure
 make && make install
 

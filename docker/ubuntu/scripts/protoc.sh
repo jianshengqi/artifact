@@ -8,7 +8,7 @@ apt-get install -y autoconf automake libtool curl make g++ unzip
 
 PB_REL="https://github.com/protocolbuffers/protobuf/releases"
 PB_VER="3.13.0"
-curl -LO ${PB_REL}/download/v${PB_VER}/protoc-${PB_VER}-linux-x86_64.zip
+curl --retry 3 -LO ${PB_REL}/download/v${PB_VER}/protoc-${PB_VER}-linux-x86_64.zip
 unzip protoc-${PB_VER}-linux-x86_64.zip -d ${HOME}/.protoc
 rm -f protoc-${PB_VER}-linux-x86_64.zip
 

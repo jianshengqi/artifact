@@ -6,7 +6,7 @@ apt-get update -y
 apt-get install -y curl git graphviz
 
 GO="https://dl.google.com/go/go1.16.4.linux-amd64.tar.gz"
-curl -o go.tgz $GO && tar xzf go.tgz -C /usr/local && rm -f go.tgz
+curl --retry 3 -o go.tgz $GO && tar xzf go.tgz -C /usr/local && rm -f go.tgz
 
 tee -a /etc/profile.d/go.sh <<-'EOF'
 # shellcheck shell=sh
