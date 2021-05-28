@@ -5,13 +5,19 @@ export DEBIAN_FRONTEND=noninteractive
 
 tee -a /etc/motd <<- 'EOF'
 -------------------------------------
-   / \__
-  (    @\___
-  /         O
- /   (_____/
-/_____/   U
+                     .
+                    / V\
+                  / `  /
+                 <<   |
+                 /    |
+               /      |
+             /        |
+           /    \  \ /
+          (      ) | |
+  ________|   _/_  | |
+<__________\______)\__)
 
-This system is built by the doge
+This system is built by sqjian
 -------------------------------------
 EOF
 
