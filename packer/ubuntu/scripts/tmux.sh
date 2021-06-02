@@ -4,7 +4,6 @@ export DEBIAN_FRONTEND=noninteractive
 
 apt-get update -y
 apt-get upgrade -y
-
 apt-get install -y tmux
 
 tee /etc/tmux.conf <<-'EOF'
