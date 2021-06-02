@@ -5,18 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
 apt-get upgrade -y
 
-apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
-
-tmux='https://github.com/tmux/tmux/releases/download/3.1c/tmux-3.1c.tar.gz'
-
-if [ ! -d "/tmp/tmux" ]; then
-  mkdir -p /tmp/tmux
-fi
-
-cd /tmp/tmux
-curl --retry 3 -L ${tmux} | tar -zx --strip-components 1
-./configure
-make && make install
+apt-get install -y tmux
 
 tee /etc/tmux.conf <<-'EOF'
 # 基础设置
