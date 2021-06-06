@@ -66,8 +66,8 @@
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E sh -eux '{{.Path}}'",
       "expect_disconnect": true,
       "scripts": [
-        "{{template_dir}}/scripts/update.sh",
         "{{template_dir}}/scripts/image.sh",
+        "{{template_dir}}/scripts/update.sh",
         "{{template_dir}}/scripts/common.sh",
         "{{template_dir}}/scripts/tmux.sh",
         "{{template_dir}}/scripts/vim.sh",
