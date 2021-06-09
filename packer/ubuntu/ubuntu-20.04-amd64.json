@@ -41,7 +41,7 @@
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
-      "ssh_timeout": "100000s",
+      "ssh_timeout": "10000s",
       "type": "virtualbox-iso",
       "memory": "{{ user `memory` }}",
       "cpus": "{{ user `cpus` }}",
