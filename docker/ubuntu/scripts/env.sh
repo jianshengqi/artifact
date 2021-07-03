@@ -3,7 +3,7 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-tee -a /etc/motd <<- 'EOF'
+tee -a /etc/motd <<- EOF
 -------------------------------------
    / \__
   (    @\___
@@ -11,7 +11,7 @@ tee -a /etc/motd <<- 'EOF'
  /   (_____/
 /_____/   U
 
-This system is built by sqjian
+This system is built by sqjian in $(date '+%Y-%m-%d %H:%M:%S')
 -------------------------------------
 EOF
 
